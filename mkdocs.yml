@@ -1,2 +1,12 @@
+# Project information
 site_name: Felipe Guedes - Blog
+site_url: https://guedesfelipe.github.io/blog/
+site_author: Felipe Guedes
+site_description: Personal blog, where I write about technologies
+
+# Repository
+repo_name: guedesfelipe/blog
+repo_url: https://github.com/guedesfelipe/blog
+edit_uri: ""
+
 theme: material
