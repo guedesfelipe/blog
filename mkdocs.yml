@@ -9,4 +9,41 @@ repo_name: guedesfelipe/blog
 repo_url: https://github.com/guedesfelipe/blog
 edit_uri: ""
 
-theme: material
+# Configuration
+theme: 
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: deep purple
+      accent: amber
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: deep purple
+      accent: amber
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  homepage: https://guedesfelipe.github.io/blog/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/guedesfelipe
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/felipe-guedes-263480127
+    - icon: fontawesome/solid/globe
+      link: https://guedesfelipe.github.io/blog/
+    - icon: fontawesome/solid/graduation-cap
+      link: https://guedesfelipe.github.io
