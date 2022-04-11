@@ -12,6 +12,7 @@ edit_uri: ""
 # Configuration
 theme: 
   name: material
+  custom_dir: overrides
   language: en
   features:
     - content.code.annotate
