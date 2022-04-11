@@ -12,6 +12,7 @@ edit_uri: ""
 # Configuration
 theme: 
   name: material
+  language: en
   features:
     - content.code.annotate
   palette:
@@ -49,6 +50,13 @@ extra:
       link: https://guedesfelipe.github.io/blog/
     - icon: fontawesome/solid/graduation-cap
       link: https://guedesfelipe.github.io
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Portuguese (Brasilian)
+      link: /blog/pt-BR/
+      lang: pt-BR
 
 # Extensions
 markdown_extensions:
@@ -90,3 +98,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+# Page tree
+nav:
+  - Home: index.md
