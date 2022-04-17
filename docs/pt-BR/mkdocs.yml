@@ -18,6 +18,7 @@ theme:
   language: pt-BR
   features:
     - content.code.annotate
+    - navigation.top
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
