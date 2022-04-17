@@ -36,7 +36,8 @@ theme:
 
 # Plugins
 plugins:
-  - search
+  - search:
+      lang: en
 
 # Customization
 extra:
@@ -55,7 +56,7 @@ extra:
       link: https://guedesfelipe.github.io
   alternate:
     - name: English
-      link: /
+      link: /blog/
       lang: en
     - name: Portuguese (Brasilian)
       link: /blog/pt-BR/

@@ -36,14 +36,15 @@ theme:
 
 # Plugins
 plugins:
-  - search
+  - search:
+      lang: pt-BR
 
 # Customization
 extra:
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
-  homepage: https://guedesfelipe.github.io/blog/
+  homepage: https://guedesfelipe.github.io/blog/pt-BR/
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/guedesfelipe
@@ -55,7 +56,7 @@ extra:
       link: https://guedesfelipe.github.io
   alternate:
     - name: English
-      link: /
+      link: /blog/en/
       lang: en
     - name: Portuguese (Brasilian)
       link: /blog/pt-BR/
