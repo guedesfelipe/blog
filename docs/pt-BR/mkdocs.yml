@@ -14,7 +14,7 @@ theme:
   icon:
     logo: fontawesome/solid/code
   name: material
-  custom_dir: overrides
+  custom_dir: ../../overrides
   language: pt-BR
   features:
     - content.code.annotate
