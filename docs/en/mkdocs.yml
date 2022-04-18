@@ -108,5 +108,6 @@ markdown_extensions:
 nav:
   - 🏠 &nbsp;Home: index.md
   - 🐍 &nbsp;Python:
-    - python/api.md
+    - API:
+      - python/consume-api.md
   - 🎓 &nbsp;About: https://guedesfelipe.github.io/

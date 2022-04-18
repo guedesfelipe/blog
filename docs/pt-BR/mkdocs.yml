@@ -106,5 +106,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Home: index.md
-  - Blog: /blog/posts/
+  - 🏠 &nbsp;Início: index.md
+  - 🐍 &nbsp;Python:
+    - API:
+      - python/consume-api.md
+  - 🎓 &nbsp;Sobre: https://guedesfelipe.github.io/
