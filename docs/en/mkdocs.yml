@@ -25,14 +25,14 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: deep purple
+      primary: light blue
       accent: amber
     - media: "(prefers-color-scheme: light)" 
       scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: deep purple
+      primary: indigo
       accent: amber
 
 # Plugins
@@ -103,7 +103,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path:
+      - docs_src
 
 # Page tree
 nav:
