@@ -1,8 +1,8 @@
 # Project information
 site_name: Felipe Guedes - Blog
-site_url: https://guedesfelipe.github.io/blog/pt-BR/
+site_url: https://guedesfelipe.github.io/blog/pt-BR
 site_author: Felipe Guedes
-site_description: Personal blog, where I write about technologies
+site_description: Blog pessoal, onde escrevo sobre tecnologias
 
 # Repository
 repo_name: guedesfelipe/blog
@@ -25,14 +25,14 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: deep purple
+      primary: light blue
       accent: amber
     - media: "(prefers-color-scheme: light)" 
       scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: deep purple
+      primary: indigo
       accent: amber
 
 # Plugins
@@ -57,7 +57,7 @@ extra:
       link: https://guedesfelipe.github.io
   alternate:
     - name: English
-      link: /blog/en/
+      link: /blog/
       lang: en
     - name: Portuguese (Brasilian)
       link: /blog/pt-BR/
@@ -103,6 +103,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path:
+      - docs_src
 
 # Page tree
 nav:
