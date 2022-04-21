@@ -17,7 +17,7 @@
 <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 <!-- Replace with generated snippet -->
 <script src="https://giscus.app/client.js" data-repo="guedesfelipe/blog" data-repo-id="..." data-category="..."
-  data-category-id="..." data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="1" data-theme="light"
+  data-category-id="..." data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="1" data-theme="dark_dimmed"
   data-lang="en" crossorigin="anonymous" async>
   </script>
 
@@ -27,7 +27,7 @@
   if (palette && typeof palette.color === "object")
     if (palette.color.scheme === "slate") {
       var giscus = document.querySelector("script[src*=giscus]")
-      giscus.setAttribute("data-theme", "dark")
+      giscus.setAttribute("data-theme", "dark_dimmed")
     }
 
   /* Register event handlers after documented loaded */
@@ -36,7 +36,7 @@
     ref.addEventListener("change", function () {
       var palette = __md_get("__palette")
       if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate" ? "dark" : "light"
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light"
 
         /* Instruct Giscus to change theme */
         var frame = document.querySelector(".giscus-frame")
