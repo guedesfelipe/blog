@@ -20,7 +20,12 @@ sec:
 #* Run Local
 .PHONY: run-local
 run-local:
-	@poetry run mkdocs serve -f docs/en/mkdocs.yml
+	@poetry run mkdocs serve -f docs/en/mkdocs.yml -a localhost:8000
+
+#* Run Local pt-BR
+.PHONY: run-local-br
+run-local-br:
+	@poetry run mkdocs serve -f docs/pt-BR/mkdocs.yml -a localhost:8001
 
 #* Build
 .PHONY: build
