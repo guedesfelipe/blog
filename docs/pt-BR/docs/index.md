@@ -21,6 +21,6 @@
 
 Para consumir uma API de forma simples com Python usaremos a biblioteca chamada requests...
 
-  [:octicons-arrow-right-24: Continue reading][Como consumir uma API com Python]
+  [:octicons-arrow-right-24: Continue Lendo][Como consumir uma API com Python]
 
 ---
