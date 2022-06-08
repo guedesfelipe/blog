@@ -23,7 +23,7 @@ Para consumir uma API de forma simples com Python usaremos a biblioteca chamada 
 
     ```bash
 
-    poetry install requests # (1)
+    poetry add requests # (1)
 
     ```
 
