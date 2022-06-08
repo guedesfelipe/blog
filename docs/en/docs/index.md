@@ -8,7 +8,7 @@
 <span>__Felipe Guedes__ · @guedesfelipe</span>
 <span>
 :octicons-calendar-24: April 21, 2022 ·
-:octicons-clock-24: 10 min read
+:octicons-clock-24: 2 min read
 </span>
 </aside>
 
