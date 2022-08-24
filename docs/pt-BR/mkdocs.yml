@@ -107,10 +107,21 @@ markdown_extensions:
       base_path:
       - docs_src
 
+extra_css:
+  - https://fastapi.tiangolo.com/css/termynal.css
+  - https://fastapi.tiangolo.com/css/custom.css
+extra_javascript:
+  - ../../overrides/assets/javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://fastapi.tiangolo.com/js/termynal.js
+  - https://fastapi.tiangolo.com/js/custom.js
+
 # Page tree
 nav:
   - 🏠 &nbsp;Início: index.md
   - 🐍 &nbsp;Python:
     - API:
       - python/consume-api.md
+    - python/rounding-secret.md
   - 🎓 &nbsp;Sobre: https://guedesfelipe.github.io/
