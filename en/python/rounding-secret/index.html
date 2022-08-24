@@ -12,14 +12,14 @@
         <meta name="author" content="Felipe Guedes">
       
       
-        <link rel="canonical" href="https://guedesfelipe.github.io/blog/python/consume-api/">
+        <link rel="canonical" href="https://guedesfelipe.github.io/blog/python/rounding-secret/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
     
     
       
-        <title>👽️ How to consume an API with Python - Felipe Guedes - Blog</title>
+        <title>🔐 Rounding Secret - Felipe Guedes - Blog</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-consume-an-api-with-python" class="md-skip">
+        <a href="#rounding-secret" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              👽️ How to consume an API with Python
+              🔐 Rounding Secret
             
           </span>
         </div>
@@ -320,14 +320,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -348,6 +346,27 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../consume-api/" class="md-nav__link">
+        👽️ How to consume an API with Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -360,12 +379,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          👽️ How to consume an API with Python
+          🔐 Rounding Secret
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        👽️ How to consume an API with Python
+        🔐 Rounding Secret
       </a>
       
         
@@ -384,29 +403,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparing-the-environment" class="md-nav__link">
-    🔧 Preparing the Environment
+  <a href="#frac72lfloor35rceilimplies4" class="md-nav__link">
+    \(\frac{7}{2}=\lfloor{3.5}\rceil\implies4\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    ⌨️ Code
+  <a href="#frac32lfloor15rceilimplies2" class="md-nav__link">
+    \(\frac{3}{2}=\lfloor{1.5}\rceil\implies2\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-application" class="md-nav__link">
-    🚀 Running the Application
+  <a href="#frac92lfloor45rceilimplies5" class="md-nav__link">
+    \(\frac{9}{2}=\lfloor{4.5}\rceil\implies5\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    🖼️ Output
+  <a href="#frac52lfloor25rceilimplies3" class="md-nav__link">
+    \(\frac{5}{2}=\lfloor{2.5}\rceil\implies3\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    Why?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roundnumber-ndigits" class="md-nav__link">
+    round(number[, ndigits])
   </a>
   
 </li>
@@ -415,27 +448,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rounding-secret/" class="md-nav__link">
-        🔐 Rounding Secret
-      </a>
     </li>
   
 
@@ -489,29 +501,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparing-the-environment" class="md-nav__link">
-    🔧 Preparing the Environment
+  <a href="#frac72lfloor35rceilimplies4" class="md-nav__link">
+    \(\frac{7}{2}=\lfloor{3.5}\rceil\implies4\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code" class="md-nav__link">
-    ⌨️ Code
+  <a href="#frac32lfloor15rceilimplies2" class="md-nav__link">
+    \(\frac{3}{2}=\lfloor{1.5}\rceil\implies2\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-application" class="md-nav__link">
-    🚀 Running the Application
+  <a href="#frac92lfloor45rceilimplies5" class="md-nav__link">
+    \(\frac{9}{2}=\lfloor{4.5}\rceil\implies5\)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    🖼️ Output
+  <a href="#frac52lfloor25rceilimplies3" class="md-nav__link">
+    \(\frac{5}{2}=\lfloor{2.5}\rceil\implies3\)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    Why?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roundnumber-ndigits" class="md-nav__link">
+    round(number[, ndigits])
   </a>
   
 </li>
@@ -531,67 +557,71 @@
                 
 
 
-<h1 id="how-to-consume-an-api-with-python">👽️ How to consume an API with Python<a class="headerlink" href="#how-to-consume-an-api-with-python" title="Permanent link">&para;</a></h1>
-<p>To consume an API in a simple way with python we will use the library called <a href="https://docs.python-requests.org/en/latest/">requests</a>.</p>
-<h2 id="preparing-the-environment">🔧 Preparing the Environment<a class="headerlink" href="#preparing-the-environment" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Virtual Env</label><label for="__tabbed_1_2">Poetry</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3 -m venv .venv <span class="c1"># (1)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span> .venv/bin/activate <span class="c1"># (2)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip install requests <span class="c1"># (3)</span>
+<h1 id="rounding-secret">🔐 Rounding Secret<a class="headerlink" href="#rounding-secret" title="Permanent link">&para;</a></h1>
+<p>Do you know how <code>round</code> works in python under the hood? I didn't know either and I thought it was interesting.</p>
+<p>Let's do some experiments with the <code>round</code> with some calcs:</p>
+<h3 id="frac72lfloor35rceilimplies4"><span class="arithmatex">\(\frac{7}{2}=\lfloor{3.5}\rceil\implies4\)</span><a class="headerlink" href="#frac72lfloor35rceilimplies4" title="Permanent link">&para;</a></h3>
+<details class="success" open="open">
+<summary>Python Example</summary>
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ round<span class="o">(</span><span class="m">7</span>/2<span class="o">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">4</span>
 </code></pre></div>
-<ol>
-<li>Creating a virtualenv (<img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Change <code>python3</code> to your python PATH if necessary)</li>
-<li>Activate the virtualenv (MacOS and Linux)</li>
-<li>Install <a href="https://docs.python-requests.org/en/latest/user/install/#installation-of-requests">requests</a></li>
-</ol>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>poetry add requests <span class="c1"># (1)</span>
+</div></p>
+</details>
+<h3 id="frac32lfloor15rceilimplies2"><span class="arithmatex">\(\frac{3}{2}=\lfloor{1.5}\rceil\implies2\)</span><a class="headerlink" href="#frac32lfloor15rceilimplies2" title="Permanent link">&para;</a></h3>
+<details class="success" open="open">
+<summary>Python Example</summary>
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ round<span class="o">(</span><span class="m">3</span>/2<span class="o">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="go">2</span>
 </code></pre></div>
-<ol>
-<li>Install <a href="https://docs.python-requests.org/en/latest/user/install/#installation-of-requests">requests</a> with <a href="https://python-poetry.org/">Poetry</a></li>
-</ol>
-</div>
-</div>
-</div>
-<h2 id="code">⌨️ Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
-<p>In this example we are going to consume an <a href="https://api.aakhilv.me">API</a> that will return random fun facts and print it on screen. </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">consume_api.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># (1)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.aakhilv.me/fun/facts&#39;</span><span class="p">)</span> <span class="c1"># (2)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span> <span class="c1"># (3)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">fun_fact</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># (4)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Fun Fact: </span><span class="si">{</span><span class="n">fun_fact</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># (5)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span> <span class="c1"># (6)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># (7)</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>Importing the requests library</li>
-<li>Performing the get on endpoint <code>/fun/facts</code> in the API</li>
-<li>Checking if the request returned any error <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">status_code</a>, in case of error it will generate an exception of type <code>HTTPError</code> (Line <strong>9</strong> handle this)</li>
-<li>Convert response to json and get first element from the return list</li>
-<li>Print on screen the random fun fact</li>
-<li>If line <strong>6</strong> raise an <code>HTTPError</code> exception, here it will be handled</li>
-<li>Print status_code information and the error</li>
-</ol>
-<h2 id="running-the-application">🚀 Running the Application<a class="headerlink" href="#running-the-application" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python consume_api.py
+</div></p>
+</details>
+<h3 id="frac92lfloor45rceilimplies5"><span class="arithmatex">\(\frac{9}{2}=\lfloor{4.5}\rceil\implies5\)</span><a class="headerlink" href="#frac92lfloor45rceilimplies5" title="Permanent link">&para;</a></h3>
+<div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ round<span class="o">(</span><span class="m">9</span>/2<span class="o">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">4</span>
 </code></pre></div>
-<h2 id="output">🖼️ Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
-<p><img alt="text" src="../../imgs/consume_api.png" /></p>
+</div>
+
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Why python doesn't round to 5? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+</div>
+<h3 id="frac52lfloor25rceilimplies3"><span class="arithmatex">\(\frac{5}{2}=\lfloor{2.5}\rceil\implies3\)</span><a class="headerlink" href="#frac52lfloor25rceilimplies3" title="Permanent link">&para;</a></h3>
+<div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ round<span class="o">(</span><span class="m">5</span>/2<span class="o">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="go">2</span>
+</code></pre></div>
+</div>
+
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Why python doesn't round to 3? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /></p>
+</div>
+<h2 id="why">Why? <img alt="🤔" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f914.svg" title=":thinking:" /><a class="headerlink" href="#why" title="Permanent link">&para;</a></h2>
+<p>This Result was not expected, right? But everything has a reason <img alt="🤓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f913.svg" title=":nerd:" /></p>
+<p>This is because, in Python, the <code>round</code> function implements <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even" target="_blank">banker's rounding</a>, where all the half values are rounded to the closest even number. <a href="https://en.wikipedia.org/wiki/IEEE_754#Roundings_to_nearest" target="_blank">IEEE 754</a> recommends using this rounding.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Institute of Electrical and Electronics Engineers - (<a href="https://www.ieee.org/" target="_blank">IEEE</a>)</p>
+</div>
+<h2><a href="https://docs.python.org/3/library/functions.html#round" target="_blank">Round Python Docs</a></h2>
+
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<h2 id="roundnumber-ndigits"><strong>round(number[, ndigits])</strong><a class="headerlink" href="#roundnumber-ndigits" title="Permanent link">&para;</a></h2>
+<p>Return <em>number</em> rounded to <em>ndigits</em> precision after the decimal point. If <em>ndigits</em> is omitted or is <code>None</code>, it returns the nearest integer to its input.</p>
+<p>For the built-in types supporting round(), values are rounded to the closest multiple of 10 to the power minus <em>ndigits</em>; if two multiples are equally close, rounding is done toward the even choice (so, for example, both <code>round(0.5)</code> and <code>round(-0.5)</code> are <code>0</code>, and <code>round(1.5)</code> is <code>2</code>). Any integer value is valid for <em>ndigits</em> (positive, zero, or negative). The return value is an integer if <em>ndigits</em> is omitted or <code>None</code>. Otherwise, the return value has the same type as <em>number</em>.</p>
+<p>For a general Python object <code>number</code>, <code>round</code> delegates to <code>number.__round__</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The behavior of <code>round()</code> for floats can be surprising: for example, <code>round(2.675, 2)</code> gives <code>2.67</code> instead of the expected <code>2.68</code>. This is not a bug: it’s a result of the fact that most decimal fractions can’t be represented exactly as a float. See <a href="https://docs.python.org/3/tutorial/floatingpoint.html#tut-fp-issues" target="_blank">Floating Point Arithmetic: Issues and Limitations</a> for more information.</p>
+</div>
+</div>
+<p>After knowing this I'll never use the <code>round</code> in the same way again. <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
+<p><img alt="📖" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4d6.svg" title=":book:" /> Recommended reading: <a href="https://stackoverflow.com/questions/45223778/is-bankers-rounding-really-more-numerically-stable/45245802#45245802" target="_blank">Is bankers rounding really more numerically stable?</a></p>
 
 
   
@@ -654,7 +684,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Previous: 🏠 &amp;nbsp;Home" rel="prev">
+        <a href="../consume-api/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 👽️ How to consume an API with Python" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -663,26 +693,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              🏠 &nbsp;Home
+              👽️ How to consume an API with Python
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../rounding-secret/" class="md-footer__link md-footer__link--next" aria-label="Next: 🔐 Rounding Secret" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              🔐 Rounding Secret
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
