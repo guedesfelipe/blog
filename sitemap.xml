@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://guedesfelipe.github.io/blog/</loc>
-         <lastmod>2022-08-24</lastmod>
+         <lastmod>2022-09-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://guedesfelipe.github.io/blog/python/consume-api/</loc>
-         <lastmod>2022-08-24</lastmod>
+         <lastmod>2022-09-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://guedesfelipe.github.io/blog/python/disassembler/</loc>
+         <lastmod>2022-09-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://guedesfelipe.github.io/blog/python/rounding-secret/</loc>
-         <lastmod>2022-08-24</lastmod>
+         <lastmod>2022-09-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

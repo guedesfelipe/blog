@@ -1,25 +1,25 @@
 
 <!doctype html>
-<html lang="pt" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Blog pessoal, onde escrevo sobre tecnologias">
+        <meta name="description" content="Personal blog, where I write about technologies">
       
       
         <meta name="author" content="Felipe Guedes">
       
       
-        <link rel="canonical" href="https://guedesfelipe.github.io/blog/pt-BR/python/consume-api/">
+        <link rel="canonical" href="https://guedesfelipe.github.io/blog/python/disassembler/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
       
-        <title>👽️ Como consumir uma API com Python - Felipe Guedes - Blog</title>
+        <title>🛠 Python Disassembler - Felipe Guedes - Blog</title>
       
     
     
@@ -88,8 +88,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#como-consumir-uma-api-com-python" class="md-skip">
-          Pular para conteúdo
+        <a href="#python-disassembler" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -101,8 +101,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="https://guedesfelipe.github.io/blog/pt-BR/" title="Felipe Guedes - Blog" class="md-header__button md-logo" aria-label="Felipe Guedes - Blog" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://guedesfelipe.github.io/blog/" title="Felipe Guedes - Blog" class="md-header__button md-logo" aria-label="Felipe Guedes - Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m414.8 40.79-128 448.01c-4.9 17-22.6 26.8-39.6 22-17-4.9-26.8-22.6-22-39.6l128-447.99c4.9-16.994 22.6-26.834 39.6-21.978 17 4.855 26.8 22.568 22 39.558zm103.8 80.61 112 112c12.5 12.5 12.5 32.7 0 45.2l-112 112c-12.5 12.5-32.7 12.5-45.2 0s-12.5-32.7 0-45.2l89.3-89.4-89.3-89.4c-12.5-12.5-12.5-32.7 0-45.2s32.7-12.5 45.2 0zm-352 45.2L77.25 256l89.35 89.4c12.5 12.5 12.5 32.7 0 45.2s-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2l112.028-112c12.5-12.5 32.7-12.5 45.2 0s12.5 32.7 0 45.2z"/></svg>
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              👽️ Como consumir uma API com Python
+              🛠 Python Disassembler
             
           </span>
         </div>
@@ -154,7 +154,7 @@
       <div class="md-header__option">
         <div class="md-select">
           
-          <button class="md-header__button md-icon" aria-label="Selecione a linguagem">
+          <button class="md-header__button md-icon" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
           </button>
           <div class="md-select__inner">
@@ -185,14 +185,14 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="Pesquisar">
+      <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Limpar" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -202,7 +202,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Inicializando busca
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -213,7 +213,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/guedesfelipe/blog" title="Ir para repositório" class="md-source" data-md-component="source">
+        <a href="https://github.com/guedesfelipe/blog" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -246,9 +246,9 @@
                     
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navegação" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://guedesfelipe.github.io/blog/pt-BR/" title="Felipe Guedes - Blog" class="md-nav__button md-logo" aria-label="Felipe Guedes - Blog" data-md-component="logo">
+    <a href="https://guedesfelipe.github.io/blog/" title="Felipe Guedes - Blog" class="md-nav__button md-logo" aria-label="Felipe Guedes - Blog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="m414.8 40.79-128 448.01c-4.9 17-22.6 26.8-39.6 22-17-4.9-26.8-22.6-22-39.6l128-447.99c4.9-16.994 22.6-26.834 39.6-21.978 17 4.855 26.8 22.568 22 39.558zm103.8 80.61 112 112c12.5 12.5 12.5 32.7 0 45.2l-112 112c-12.5 12.5-32.7 12.5-45.2 0s-12.5-32.7 0-45.2l89.3-89.4-89.3-89.4c-12.5-12.5-12.5-32.7 0-45.2s32.7-12.5 45.2 0zm-352 45.2L77.25 256l89.35 89.4c12.5 12.5 12.5 32.7 0 45.2s-32.7 12.5-45.2 0L9.372 278.6c-12.496-12.5-12.496-32.7 0-45.2l112.028-112c12.5-12.5 32.7-12.5 45.2 0s12.5 32.7 0 45.2z"/></svg>
@@ -258,7 +258,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/guedesfelipe/blog" title="Ir para repositório" class="md-source" data-md-component="source">
+      <a href="https://github.com/guedesfelipe/blog" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -280,7 +280,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        🏠 &nbsp;Início
+        🏠 &nbsp;Home
       </a>
     </li>
   
@@ -320,14 +320,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       
       
@@ -348,73 +346,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          👽️ Como consumir uma API com Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        👽️ Como consumir uma API com Python
+    <li class="md-nav__item">
+      <a href="../consume-api/" class="md-nav__link">
+        👽️ How to consume an API with Python
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Indice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#preparando-o-ambiente" class="md-nav__link">
-    🔧 Preparando o Ambiente
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#codigo" class="md-nav__link">
-    ⌨️ Código
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rodando-a-aplicacao" class="md-nav__link">
-    🚀 Rodando a Aplicação
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saida" class="md-nav__link">
-    🖼️ Saída
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -434,7 +370,7 @@
   
     <li class="md-nav__item">
       <a href="../rounding-secret/" class="md-nav__link">
-        🔐 Segredos do arredondamento
+        🔐 Rounding Secret
       </a>
     </li>
   
@@ -445,11 +381,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../disassembler/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          🛠 Python Disassembler
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         🛠 Python Disassembler
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    ⚗️ Test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explaining-the-result" class="md-nav__link">
+    🔎 Explaining the result
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    📖 Official Documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -470,7 +461,7 @@
   
     <li class="md-nav__item">
       <a href="https://guedesfelipe.github.io/" class="md-nav__link">
-        🎓 &nbsp;Sobre
+        🎓 &nbsp;About
       </a>
     </li>
   
@@ -489,7 +480,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Indice">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -498,34 +489,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Indice
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparando-o-ambiente" class="md-nav__link">
-    🔧 Preparando o Ambiente
+  <a href="#test" class="md-nav__link">
+    ⚗️ Test
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#codigo" class="md-nav__link">
-    ⌨️ Código
+  <a href="#explaining-the-result" class="md-nav__link">
+    🔎 Explaining the result
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rodando-a-aplicacao" class="md-nav__link">
-    🚀 Rodando a Aplicação
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#saida" class="md-nav__link">
-    🖼️ Saída
+  <a href="#official-documentation" class="md-nav__link">
+    📖 Official Documentation
   </a>
   
 </li>
@@ -545,67 +529,66 @@
                 
 
 
-<h1 id="como-consumir-uma-api-com-python">👽️ Como consumir uma API com Python<a class="headerlink" href="#como-consumir-uma-api-com-python" title="Permanent link">&para;</a></h1>
-<p>Para consumir uma API de forma simples com Python usaremos a biblioteca chamada <a href="https://docs.python-requests.org/en/latest/">requests</a>.</p>
-<h2 id="preparando-o-ambiente">🔧 Preparando o Ambiente<a class="headerlink" href="#preparando-o-ambiente" title="Permanent link">&para;</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Virtual Env</label><label for="__tabbed_1_2">Poetry</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python3 -m venv .venv <span class="c1"># (1)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">source</span> .venv/bin/activate <span class="c1"># (2)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>pip install requests <span class="c1"># (3)</span>
+<h1 id="python-disassembler">🛠 Python Disassembler<a class="headerlink" href="#python-disassembler" title="Permanent link">&para;</a></h1>
+<p>This tip is for you who like to <em>bit diddling</em> and understand what python does under the hood.</p>
+<p>Python has a module that disassembles your code, that is, you can analyze the bytecode of your code!</p>
+<h2 id="test">⚗️ Test<a class="headerlink" href="#test" title="Permanent link">&para;</a></h2>
+<p>Let's test it, for that we need to import the module called <code>dis</code> and use it as shown in the example below::</p>
+<div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ from dis import dis
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp"># </span>&gt;&gt;&gt;$ def add_two<span class="o">(</span>number: int<span class="o">)</span> -&gt; int:
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp"># </span>...$     <span class="k">return</span> number + <span class="m">2</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp"># </span>&gt;&gt;&gt;$ dis<span class="o">(</span>add_two<span class="o">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">  2           0 LOAD_FAST                0 (number)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">              2 LOAD_CONST               1 (2)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">              4 BINARY_ADD</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">              6 RETURN_VALUE</span>
 </code></pre></div>
-<ol>
-<li>Criando a virtualenv (<img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> Mude <code>python3</code> para o PATH onde esta instalado o seu Python se for necessário)</li>
-<li>Ativando a virtualenv (MacOS e Linux)</li>
-<li>Instalando a biblioteca <a href="https://docs.python-requests.org/en/latest/user/install/#installation-of-requests">requests</a></li>
-</ol>
 </div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>poetry add requests <span class="c1"># (1)</span>
-</code></pre></div>
-<ol>
-<li>Instalando a biblioteca <a href="https://docs.python-requests.org/en/latest/user/install/#installation-of-requests">requests</a> with <a href="https://python-poetry.org/">Poetry</a></li>
-</ol>
-</div>
-</div>
-</div>
-<h2 id="codigo">⌨️ Código<a class="headerlink" href="#codigo" title="Permanent link">&para;</a></h2>
-<p>Neste exemple vamos consumir a <a href="https://api.aakhilv.me">API</a> que retornará um fato divertido aleatório e mostrar em tela.</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">consume_api.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">requests</span> <span class="c1"># (1)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">try</span><span class="p">:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.aakhilv.me/fun/facts&#39;</span><span class="p">)</span> <span class="c1"># (2)</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span> <span class="c1"># (3)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">fun_fact</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># (4)</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Fun Fact: </span><span class="si">{</span><span class="n">fun_fact</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># (5)</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span> <span class="c1"># (6)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;[</span><span class="si">{</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">error</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># (7)</span>
+
+<h2 id="explaining-the-result">🔎 Explaining the result<a class="headerlink" href="#explaining-the-result" title="Permanent link">&para;</a></h2>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">dis_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">dis</span> <span class="kn">import</span> <span class="n">dis</span> <span class="c1"># (1)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">add_two</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> <span class="c1"># (2)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">2</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">dis</span><span class="p">(</span><span class="n">add_two</span><span class="p">)</span> <span class="c1"># (3)</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Result</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">#  2           0 LOAD_FAST                0 (number) (4)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">#              2 LOAD_CONST               1 (.2.) (5)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1">#              4 BINARY_ADD (6)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">#              6 RETURN_VALUE (7)</span>
 </code></pre></div></td></tr></table></div>
 <ol>
-<li>Importando a biblioteca requests</li>
-<li>Realizando o get no enpoint <code>/fun/facts</code> na API</li>
-<li>Checando se a requisição retornou algum erro de <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status">status_code</a>, caso de erro irá gerar uma exceção do tipo <code>HTTPError</code> (Linha <strong>9</strong> trata esta exceção)</li>
-<li>Converte o response para json e pega o primeiro elemento da lista de retorno</li>
-<li>Mostra em tela um fato divertido aleatório</li>
-<li>Se a linha <strong>6</strong> levantar uma exceção do tipo <code>HTTPError</code>, aqui ela será tratada</li>
-<li>Mostra em tela o status_code e o erro ocorrido</li>
+<li>Importing <code>dis</code> library.</li>
+<li>Declare a function that adds two to a number.</li>
+<li>Calling Disassembly function to show us the bytecode.</li>
+<li>Pushes a reference to the local <code>co_varnames[var_num]</code> onto the stack. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST" target="_blank">Doc Link</a></li>
+<li>Pushes <code>co_consts[consti]</code> onto the stack. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST" target="_blank">Doc Link</a></li>
+<li>Implements <code>TOS = TOS1 + TOS</code>. <a href="https://docs.python.org/3/library/dis.html#opcode-BINARY_ADD" target="_blank">Doc Link</a></li>
+<li>Returns with TOS to the caller of the function. <a href="https://docs.python.org/3/library/dis.html#opcode-RETURN_VALUE" target="_blank">Doc Link</a></li>
 </ol>
-<h2 id="rodando-a-aplicacao">🚀 Rodando a Aplicação<a class="headerlink" href="#rodando-a-aplicacao" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python consume_api.py
-</code></pre></div>
-<h2 id="saida">🖼️ Saída<a class="headerlink" href="#saida" title="Permanent link">&para;</a></h2>
-<p><img alt="text" src="../../imgs/consume_api.png" /></p>
+<h2 id="official-documentation">📖 <a href="https://docs.python.org/3/library/dis.html" target="_blank">Official Documentation<a><a class="headerlink" href="#official-documentation" title="Permanent link">&para;</a></h2>
 
 
   
@@ -615,7 +598,7 @@
               
 
 <!-- Giscus -->
-<h2 id="__comments">Comentários</h2>
+<h2 id="__comments">Comments</h2>
 <!-- Replace with generated snippet -->
 <script src="https://giscus.app/client.js" data-repo="guedesfelipe/blog" data-repo-id="R_kgDOHFyTCw" data-category="General"
   data-category-id="DIC_kwDOHFyTC84COtjL" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="1" data-theme="dark_dimmed"
@@ -657,7 +640,7 @@
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Voltar para o topo
+            Back to top
           </a>
         
       </main>
@@ -665,38 +648,23 @@
         <footer class="md-footer">
   
     
-    <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../.." class="md-footer__link md-footer__link--prev" aria-label="Anterior: 🏠 &amp;nbsp;Início" rel="prev">
+        <a href="../rounding-secret/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 🔐 Rounding Secret" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Anterior
+                Previous
               </span>
-              🏠 &nbsp;Início
+              🔐 Rounding Secret
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../rounding-secret/" class="md-footer__link md-footer__link--next" aria-label="Próximo: 🔐 Segredos do arredondamento" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Próximo
-              </span>
-              🔐 Segredos do arredondamento
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
@@ -761,7 +729,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.top"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de Transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de Transfer\u00eancia", "search.config.lang": "pt", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Buscar", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Perdido", "select.version.title": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.top"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
