@@ -5,7 +5,7 @@ Essa dica é para você que gosta de *escovar bits* e entender o que o python fa
 Python possui um módulo que *'disassembla'* seu código, ou seja, você pode analisar o bytecode do seu código!
 
 
-## ⚗️ Test
+## ⚗️ Teste
 
 Vamos testar, para isso precisamos importar o módulo chamado `dis` e utilizar conforme o exemplo abaixo:
 
@@ -37,7 +37,7 @@ Vamos testar, para isso precisamos importar o módulo chamado `dis` e utilizar c
 1. Importando a biblioteca `dis`.
 2. Declara uma função que adiciona dois a um número.
 3. Chamando a função `dis` para *disassemblar* o código e nos mostrar o bytecode.
-4. Envia uma referência para o local `co_varnames[var_num]` na pilha.
+4. Envia uma referência para o local `co_varnames[var_num]` na pilha. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST" target="_blank">Doc Link</a>
 5. Coloca `co_consts[consti]` na pilha. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST" target="_blank">Doc Link</a>
 6. Implementa `TOS = TOS1 + TOS`. <a href="https://docs.python.org/3/library/dis.html#opcode-BINARY_ADD" target="_blank">Doc Link</a>
 7. Retorna com TOS para quem chamou a função. <a href="https://docs.python.org/3/library/dis.html#opcode-RETURN_VALUE" target="_blank">Doc Link</a>
