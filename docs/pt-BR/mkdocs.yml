@@ -124,4 +124,5 @@ nav:
     - API:
       - python/consume-api.md
     - python/rounding-secret.md
+    - python/disassembler.md
   - 🎓 &nbsp;Sobre: https://guedesfelipe.github.io/
