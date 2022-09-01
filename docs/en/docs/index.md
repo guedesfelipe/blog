@@ -1,6 +1,32 @@
 # Recent Posts
 
 
+## [🛠 Python Disassembler]
+
+<aside class="mdx-author" markdown>
+![@guedesfelipe][@guedesfelipe avatar]
+
+<span>__Felipe Guedes__ · @guedesfelipe</span>
+<span>
+:octicons-calendar-24: August 31, 2022 ·
+:octicons-clock-24: 1 min read
+</span>
+</aside>
+
+
+  [@guedesfelipe avatar]: https://avatars.githubusercontent.com/u/25853920
+
+  [🛠 Python Disassembler]: python/disassembler.md
+
+---
+
+Do you know how disassembly python code?
+
+  [:octicons-arrow-right-24: Continue reading][🛠 Python Disassembler]
+
+---
+
+
 ## [🔐 Rounding Secret]
 
 <aside class="mdx-author" markdown>
