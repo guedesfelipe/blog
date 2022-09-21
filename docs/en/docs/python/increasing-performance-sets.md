@@ -54,13 +54,125 @@ Notice that it does a lot of things that the first one doesn't, this makes this 
 
 ## Benchmark
 
-| Set Size   |  Factor | Constructor Time | Factor | Without Constructor Time | Factor |
-| :--------: | :-----: | :--------------: | :----: | :----------------------: | :----: |
-|    1.000   |    1x   |                  |        |                          |        |
-|   10.000   |   10x   |                  |        |                          |        |
-|   100.000  |   100x  |                  |        |                          |        |
-|  1.000.000 |  1.000x |                  |        |                          |        |
-| 10.000.000 | 10.000x |                  |        |                          |        |
+| Set Size   |  Factor | Constructor Time | Factor    | Without Constructor Time | Factor    | % Optimization |
+| :--------: | :-----: | :--------------: | :-------: | :----------------------: | :-------: | :------------: |
+|    1.000   |    1x   | 0.0000577s       | 1.00x     | 0.0000435s               | 1.00x     | 24.61%         |
+|   10.000   |   10x   | 0.0006500s       | 11.27x    | 0.0005280s               | 12.14x    | 18.77%         |
+|   100.000  |   100x  | 0.0097000s       | 168.11x   | 0.0094400s               | 217.01x   | 2.68%          |
+|  1.000.000 |  1.000x | 0.1050000s       | 1819.76x  | 0.1000000s               | 2298.85x  | 4.76%          |
+| 10.000.000 | 10.000x | 1.1200000s       | 19410.75x | 0.8950000s               | 20574.71x | 18.75%         |
+
+!!! note
+
+    Laptop Core i5-4278U 2.60GHz executing in python 3.9.10
+
+    ??? example "Example - Constructor Time"
+
+        === "1.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit 'set([num for num in range(10**3)])'
+
+            5000 loops, best of 5: 57.7 usec per loop
+            ```
+            </div>
+
+        === "10.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit 'set([num for num in range(10**4)])'
+
+            500 loops, best of 5: 650 usec per loop
+            ```
+            </div>
+
+        === "100.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit 'set([num for num in range(10**5)])'
+
+            50 loops, best of 5: 9.7 msec per loop
+            ```
+            </div>
+
+        === "1.000.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit 'set([num for num in range(10**6)])'
+
+            2 loops, best of 5: 105 msec per loop
+            ```
+            </div>
+
+        === "10.000.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit 'set([num for num in range(10**7)])'
+
+            1 loops, best of 5: 1.12 sec per loop
+            ```
+            </div>
+
+
+    ??? example "Example - Whithout Constructor Time"
+
+        === "1.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit '{num for num in range(10**3)}'
+
+            5000 loops, best of 5: 43.5 usec per loop
+            ```
+            </div>
+
+        === "10.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit '{num for num in range(10**4)}'
+
+            500 loops, best of 5: 528 usec per loop
+            ```
+            </div>
+
+        === "100.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit '{num for num in range(10**5)}'
+
+            50 loops, best of 5: 9.44 msec per loop
+            ```
+            </div>
+
+        === "1.000.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit '{num for num in range(10**6)}'
+
+            2 loops, best of 5: 100 msec per loop
+            ```
+            </div>
+
+        === "10.000.000"
+
+            <div class="termy">
+            ```console
+            $ python -m timeit '{num for num in range(10**7)}'
+
+            1 loops, best of 5: 895 msec per loop
+            ```
+            </div>
+
+
+
 
 ## Conclusion
 
