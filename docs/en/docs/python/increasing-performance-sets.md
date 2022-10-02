@@ -1,4 +1,4 @@
-# Increasing the performance of sets
+# ⚡️ Increasing the performance of sets
 
 There are basically two ways to declare sets in python:
 
@@ -15,7 +15,7 @@ second_option = set([1, 2])
     This aproach calls the constructor of sets
 
 
-## But what is the difference between them?
+## 🤔 But what is the difference between them?
 
 
 Let's see what python does under the hood using <a href="https://guedesfelipe.github.io/blog/python/disassembler/" target="_blank">disassembler</a>. :nerd:
@@ -33,7 +33,7 @@ Let's see what python does under the hood using <a href="https://guedesfelipe.gi
 ```
 </div>
 
-Here we can see that whoever does almost all the work is the special *byte_code* called `BUILD_SET` and soon after it returns the set to us, very simple right.
+Here we can see that whoever does almost all the work is the special *byte_code* called `BUILD_SET` and soon after it returns the set to us. Very simple, right?
 
 ## Let's see the byte code of the second option
 <div class="termy">
@@ -50,9 +50,11 @@ Here we can see that whoever does almost all the work is the special *byte_code*
 ```
 </div>
 
-Notice that it does a lot of things that the first one doesn't, this makes this approach slower when loading sets in python, because instead of `BUILD_SET` it needs to do 3 more steps, which are `LOAD_NAME`, `BUILD_LIST` and `CALL_FUNCTION`. This way is slower because the python interpreter needs to look up the set name to fund the constructor, then build a list and finally pass it to the constructor.
+Notice that it does a lot of things that the first one doesn't, this makes this approach slower when loading sets in python, because instead of `BUILD_SET` it needs to do 3 more steps, which are `LOAD_NAME`, `BUILD_LIST` and `CALL_FUNCTION`. This way is slower because the python interpreter needs to look up the set name to find the constructor, then build a list and finally pass it to the constructor.
 
-## Benchmark
+## 📈 Benchmark
+
+In the table below, we can see the difference between the two way, and which one is more optimized:
 
 | Set Size   |  Factor | Constructor Time/s | Factor    | Without Constructor Time/s | Factor    | % Optimization |
 | :--------: | :-----: | :----------------: | :-------: | :------------------------: | :-------: | :------------: |
@@ -176,6 +178,6 @@ Notice that it does a lot of things that the first one doesn't, this makes this 
 
 ## Conclusion
 
-So if one day you need to instantiate a set, always try to prefer the creation of the first way, beacause it is more optimized. And an extra tip: In case you need to instantiate an empty set, we can only do that by calling the constructor okay?!
+So if one day you need to instantiate a set, always try to use the first option, because it is more optimized. And an extra tip: In case you need to instantiate an empty set, we can only do that by calling the constructor, okay?!
 
-Leave your comment below about the post, see you next time!
+Leave your comment below about the post, see you next time! 😃
