@@ -1,3 +1,35 @@
+# Felipe's Blog
+
+<p align="center">
+  <img src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/25853920?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" alt="Felipe's Avatar"/>
+  <p align="center">I'm Felipe, nice to meet you! 👋</p>
+</p>
+
+---
+<p align="center">
+I'm a software engineer from <b>Brazil</b>. 🇧🇷
+</p>
+
+<p align="center">
+The blog aims to share technical knowledge in programming that I acquired during years and recent learnings, it's like my notebook a little more refined, but with the same technical content. Always trying to simplify understanding.
+O blog tem como objetivo compartilhar conhecimento técnico em programação que adquiri durante anos e aprendizados recentes, é como se fosse meu bloco de notas um pouco mais refinado, mas com o mesmo teor técnico. Sempre tentando simplificar o entendimento.
+</p>
+
+
+<p align="center">
+I'm the creator of <b><a href="https://guedesfelipe.github.io/pls-cli/" target="_blank">PLS-CLI</a></b>.
+</p>
+
+<p align="center">If my open source work is useful to you, consider buying me a coffee. ☕️</p>
+
+<p align="center">
+  <a href="https://ko-fi.com/guedesfelipe" target="_blank">
+    <img src="https://user-images.githubusercontent.com/25853920/175832199-6c75d866-31b8-4209-bd1a-db116a6dd032.png" width=300 />
+  </a>
+</p>
+
+---
+
 # Recent Posts
 
 
