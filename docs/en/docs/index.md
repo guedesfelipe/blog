@@ -33,6 +33,33 @@ I'm the creator of <b><a href="https://guedesfelipe.github.io/pls-cli/" target="
 # Recent Posts
 
 
+## [⚡️ Increasing the performance of sets]
+
+<aside class="mdx-author" markdown>
+![@guedesfelipe][@guedesfelipe avatar]
+
+<span>__Felipe Guedes__ · @guedesfelipe</span>
+<span>
+:octicons-calendar-24: October 05, 2022 ·
+:octicons-clock-24: 1 min read
+</span>
+</aside>
+
+
+  [@guedesfelipe avatar]: https://avatars.githubusercontent.com/u/25853920
+
+
+  [⚡️ Increasing the performance of sets]: python/increasing-performance-sets.md
+
+---
+
+Do you know how Increasing the performance of sets?
+
+  [:octicons-arrow-right-24: Continue reading][⚡️ Increasing the performance of sets]
+
+---
+
+
 ## [🛠 Python Disassembler]
 
 <aside class="mdx-author" markdown>
