@@ -12,14 +12,14 @@
         <meta name="author" content="Felipe Guedes">
       
       
-        <link rel="canonical" href="https://guedesfelipe.github.io/blog/pt-BR/python/disassembler/">
+        <link rel="canonical" href="https://guedesfelipe.github.io/blog/pt-BR/python/increasing-performance-sets/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
     
     
       
-        <title>🛠 Python Disassembler - Felipe Guedes - Blog</title>
+        <title>⚡️ Aumentando a performance dos conjuntos (sets) - Felipe Guedes - Blog</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-disassembler" class="md-skip">
+        <a href="#aumentando-a-performance-dos-conjuntos-sets" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              🛠 Python Disassembler
+              ⚡️ Aumentando a performance dos conjuntos (sets)
             
           </span>
         </div>
@@ -383,6 +383,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../disassembler/" class="md-nav__link">
+        🛠 Python Disassembler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -395,12 +409,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          🛠 Python Disassembler
+          ⚡️ Aumentando a performance dos conjuntos (sets)
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        🛠 Python Disassembler
+        ⚡️ Aumentando a performance dos conjuntos (sets)
       </a>
       
         
@@ -419,22 +433,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#teste" class="md-nav__link">
-    ⚗️ Teste
+  <a href="#mas-qual-a-diferenca-entre-eles" class="md-nav__link">
+    🤔 Mas qual a diferença entre eles?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicando-o-resultado" class="md-nav__link">
-    🔎 Explicando o resultado
+  <a href="#vamos-ver-o-byte-code-da-primiera-opcao" class="md-nav__link">
+    Vamos ver o byte code da primiera opção
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentacao-oficial" class="md-nav__link">
-    📖 Documentação Oficial
+  <a href="#vamos-ver-o-byte-code-da-segunda-opcao" class="md-nav__link">
+    Vamos ver o byte code da segunda opção
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    📈 Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    Conclusão
   </a>
   
 </li>
@@ -443,20 +471,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../increasing-performance-sets/" class="md-nav__link">
-        ⚡️ Aumentando a performance dos conjuntos (sets)
-      </a>
     </li>
   
 
@@ -510,22 +524,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#teste" class="md-nav__link">
-    ⚗️ Teste
+  <a href="#mas-qual-a-diferenca-entre-eles" class="md-nav__link">
+    🤔 Mas qual a diferença entre eles?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#explicando-o-resultado" class="md-nav__link">
-    🔎 Explicando o resultado
+  <a href="#vamos-ver-o-byte-code-da-primiera-opcao" class="md-nav__link">
+    Vamos ver o byte code da primiera opção
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#documentacao-oficial" class="md-nav__link">
-    📖 Documentação Oficial
+  <a href="#vamos-ver-o-byte-code-da-segunda-opcao" class="md-nav__link">
+    Vamos ver o byte code da segunda opção
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmark" class="md-nav__link">
+    📈 Benchmark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    Conclusão
   </a>
   
 </li>
@@ -546,66 +574,210 @@
                   
 
 
-<h1 id="python-disassembler">🛠 Python Disassembler<a class="headerlink" href="#python-disassembler" title="Permanent link">&para;</a></h1>
-<p>Essa dica é para você que gosta de <em>escovar bits</em> e entender o que o python faz por baixo dos panos.</p>
-<p>Python possui um módulo que <em>'disassembla'</em> seu código, ou seja, você pode analisar o bytecode do seu código!</p>
-<h2 id="teste">⚗️ Teste<a class="headerlink" href="#teste" title="Permanent link">&para;</a></h2>
-<p>Vamos testar, para isso precisamos importar o módulo chamado <code>dis</code> e utilizar conforme o exemplo abaixo:</p>
+<h1 id="aumentando-a-performance-dos-conjuntos-sets">⚡️ Aumentando a performance dos conjuntos (sets)<a class="headerlink" href="#aumentando-a-performance-dos-conjuntos-sets" title="Permanent link">&para;</a></h1>
+<p>Existe basicamente duas maneiras de declarar conjuntos(sets) no python:</p>
+<div class="highlight"><span class="filename">Primeira Opção</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">primeira_opcao</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">Segunda Opção</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">segunda_opcao</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Esta abordagem chama o construtor do conjunto(set)</p>
+</div>
+<h2 id="mas-qual-a-diferenca-entre-eles">🤔 Mas qual a diferença entre eles?<a class="headerlink" href="#mas-qual-a-diferenca-entre-eles" title="Permanent link">&para;</a></h2>
+<p>Vamos ver o que o Python faz por baixo dos panos usando <a href="https://guedesfelipe.github.io/blog/python/disassembler/" target="_blank">disassembler</a>. <img alt="🤓" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f913.svg" title=":nerd:" /></p>
+<h2 id="vamos-ver-o-byte-code-da-primiera-opcao">Vamos ver o byte code da primiera opção<a class="headerlink" href="#vamos-ver-o-byte-code-da-primiera-opcao" title="Permanent link">&para;</a></h2>
 <div class="termy">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ from dis import dis
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gp"># </span>&gt;&gt;&gt;$ def add_two<span class="o">(</span>number: int<span class="o">)</span> -&gt; int:
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="gp"># </span>...$     <span class="k">return</span> number + <span class="m">2</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gp"># </span>&gt;&gt;&gt;$ dis<span class="o">(</span>add_two<span class="o">)</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="go">  2           0 LOAD_FAST                0 (number)</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="go">              2 LOAD_CONST               1 (2)</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="go">              4 BINARY_ADD</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="go">              6 RETURN_VALUE</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ from dis import dis
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="gp"># </span>&gt;&gt;&gt;$ dis<span class="o">(</span><span class="s1">&#39;{1, 2}&#39;</span><span class="o">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">  1           0 LOAD_CONST               0 (1)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="go">              2 LOAD_CONST               1 (2)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="go">              4 BUILD_SET                2</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="go">              6 RETURN_VALUE</span>
 </code></pre></div>
 </div>
 
-<h2 id="explicando-o-resultado">🔎 Explicando o resultado<a class="headerlink" href="#explicando-o-resultado" title="Permanent link">&para;</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">dis_example.py</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">dis</span> <span class="kn">import</span> <span class="n">dis</span> <span class="c1"># (1)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span> <span class="nf">add_two</span><span class="p">(</span><span class="n">number</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> <span class="c1"># (2)</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">return</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">2</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">dis</span><span class="p">(</span><span class="n">add_two</span><span class="p">)</span> <span class="c1"># (3)</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1"># Result</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="c1">#  2           0 LOAD_FAST                0 (number) (4)</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">#              2 LOAD_CONST               1 (.2.) (5)</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="c1">#              4 BINARY_ADD (6)</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">#              6 RETURN_VALUE (7)</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>Importando a biblioteca <code>dis</code>.</li>
-<li>Declara uma função que adiciona dois a um número.</li>
-<li>Chamando a função <code>dis</code> para <em>disassemblar</em> o código e nos mostrar o bytecode.</li>
-<li>Envia uma referência para o local <code>co_varnames[var_num]</code> na pilha. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_FAST" target="_blank">Doc Link</a></li>
-<li>Coloca <code>co_consts[consti]</code> na pilha. <a href="https://docs.python.org/3/library/dis.html#opcode-LOAD_CONST" target="_blank">Doc Link</a></li>
-<li>Implementa <code>TOS = TOS1 + TOS</code>. <a href="https://docs.python.org/3/library/dis.html#opcode-BINARY_ADD" target="_blank">Doc Link</a></li>
-<li>Retorna com TOS para quem chamou a função. <a href="https://docs.python.org/3/library/dis.html#opcode-RETURN_VALUE" target="_blank">Doc Link</a></li>
-</ol>
-<h2 id="documentacao-oficial">📖 <a href="https://docs.python.org/3/library/dis.html" target="_blank">Documentação Oficial<a><a class="headerlink" href="#documentacao-oficial" title="Permanent link">&para;</a></h2>
+<p>Aqui podemos ver que quem faz quase todo o trabalho é o <em>byte_code</em> especial chamado <code>BUILD_SET</code> e logo em seguida retorna o conjunto para nós, muito simple né?</p>
+<h2 id="vamos-ver-o-byte-code-da-segunda-opcao">Vamos ver o byte code da segunda opção<a class="headerlink" href="#vamos-ver-o-byte-code-da-segunda-opcao" title="Permanent link">&para;</a></h2>
+<div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp"># </span>&gt;&gt;&gt;$ from dis import dis
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="gp"># </span>&gt;&gt;&gt;$ 
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gp"># </span>&gt;&gt;&gt;$ dis<span class="o">(</span><span class="s1">&#39;set([1, 2])&#39;</span><span class="o">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">  1           0 LOAD_NAME                0 (set)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="go">              2 LOAD_CONST               0 (1)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="go">              4 LOAD_CONST               1 (2)</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="go">              6 BUILD_LIST               2</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="go">              8 CALL_FUNCTION            1</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="go">             10 RETURN_VALUE</span>
+</code></pre></div>
+</div>
+
+<p>Observe que ele faz muitas coisas que o primeiro não faz, isso torna essa abordagem mais lenta ao carregar conjuntos (sets) no python, pois no lugar do <code>BUILD_SET</code> ele precisa fazer mais 3 passos, que são <code>LOAD_NAME</code>, <code>BUILD_LIST</code> e <code>CALL_FUNCTION</code>. Essa forma é mais lenta porque o interpretador python precisa pesquisar o nome do conjunto (set) para encontrar o construtor, criar uma lista e, finalmente, passá-la para o construtor.</p>
+<p>Você pode encontrar a descrição de todos os byte codes <a href="https://docs.python.org/3/library/dis.html#python-bytecode-instructions" target="_blank">aqui</a>.</p>
+<h2 id="benchmark">📈 Benchmark<a class="headerlink" href="#benchmark" title="Permanent link">&para;</a></h2>
+<p>Na tabela abiaxo podemos ver a diferença entre as duas maneiras e qual é a mais otimizada:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Set Size</th>
+<th align="center">Factor</th>
+<th align="center">Constructor Time/s</th>
+<th align="center">Factor</th>
+<th align="center">Without Constructor Time/s</th>
+<th align="center">Factor</th>
+<th align="center">% Optimization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1.000</td>
+<td align="center">1x</td>
+<td align="center">0.0000577s</td>
+<td align="center">1.00x</td>
+<td align="center">0.0000435s</td>
+<td align="center">1.00x</td>
+<td align="center">24.61%</td>
+</tr>
+<tr>
+<td align="center">10.000</td>
+<td align="center">10x</td>
+<td align="center">0.0006500s</td>
+<td align="center">11.27x</td>
+<td align="center">0.0005280s</td>
+<td align="center">12.14x</td>
+<td align="center">18.77%</td>
+</tr>
+<tr>
+<td align="center">100.000</td>
+<td align="center">100x</td>
+<td align="center">0.0097000s</td>
+<td align="center">168.11x</td>
+<td align="center">0.0094400s</td>
+<td align="center">217.01x</td>
+<td align="center">2.68%</td>
+</tr>
+<tr>
+<td align="center">1.000.000</td>
+<td align="center">1.000x</td>
+<td align="center">0.1050000s</td>
+<td align="center">1819.76x</td>
+<td align="center">0.1000000s</td>
+<td align="center">2298.85x</td>
+<td align="center">4.76%</td>
+</tr>
+<tr>
+<td align="center">10.000.000</td>
+<td align="center">10.000x</td>
+<td align="center">1.1200000s</td>
+<td align="center">19410.75x</td>
+<td align="center">0.8950000s</td>
+<td align="center">20574.71x</td>
+<td align="center">18.75%</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Laptop Core i5-4278U 2.60GHz executing in python 3.9.10</p>
+<details class="example">
+<summary>Example - Constructor Time</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">1.000</label><label for="__tabbed_1_2">10.000</label><label for="__tabbed_1_3">100.000</label><label for="__tabbed_1_4">1.000.000</label><label for="__tabbed_1_5">10.000.000</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;set([num for num in range(10**3)])&#39;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">5000 loops, best of 5: 57.7 usec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;set([num for num in range(10**4)])&#39;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">500 loops, best of 5: 650 usec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;set([num for num in range(10**5)])&#39;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="go">50 loops, best of 5: 9.7 msec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;set([num for num in range(10**6)])&#39;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">2 loops, best of 5: 105 msec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;set([num for num in range(10**7)])&#39;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="go">1 loops, best of 5: 1.12 sec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</details>
+<details class="example">
+<summary>Example - Whithout Constructor Time</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">1.000</label><label for="__tabbed_2_2">10.000</label><label for="__tabbed_2_3">100.000</label><label for="__tabbed_2_4">1.000.000</label><label for="__tabbed_2_5">10.000.000</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;{num for num in range(10**3)}&#39;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">5000 loops, best of 5: 43.5 usec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;{num for num in range(10**4)}&#39;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="go">500 loops, best of 5: 528 usec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;{num for num in range(10**5)}&#39;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="go">50 loops, best of 5: 9.44 msec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;{num for num in range(10**6)}&#39;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="go">2 loops, best of 5: 100 msec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+<div class="tabbed-block">
+<p><div class="termy">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">$ </span>python -m timeit <span class="s1">&#39;{num for num in range(10**7)}&#39;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">1 loops, best of 5: 895 msec per loop</span>
+</code></pre></div>
+</div></p>
+</div>
+</div>
+</div>
+</details>
+</div>
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
+<p>Então, se um dia você precisar instanciar um conjunto (set), tente sempre usar a primeira opção, pois ela é mais otimizada. E uma dica extra: Caso precise instanciar um conjunto (set) vazio, só podemos fazer isso chamando o construtor, ok?!</p>
+<p>Deixe seu comentário abaixo sobre o post, até a próxima! 😃</p>
 
 
   
@@ -670,7 +842,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
       
         
-        <a href="../rounding-secret/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 🔐 Segredos do arredondamento" rel="prev">
+        <a href="../disassembler/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 🛠 Python Disassembler" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -679,26 +851,11 @@
               <span class="md-footer__direction">
                 Anterior
               </span>
-              🔐 Segredos do arredondamento
+              🛠 Python Disassembler
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../increasing-performance-sets/" class="md-footer__link md-footer__link--next" aria-label="Próximo: ⚡️ Aumentando a performance dos conjuntos (sets)" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Próximo
-              </span>
-              ⚡️ Aumentando a performance dos conjuntos (sets)
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
