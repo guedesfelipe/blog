@@ -7,7 +7,7 @@
 
 ---
 <p align="center">
-Sou engenheiro de software do <b>Brasil</b>. 🇧🇷
+Sou engenheiro de software <b>Brasileiro</b>. 🇧🇷
 </p>
 
 <p align="center">
@@ -32,6 +32,32 @@ Sou criador do <b><a href="https://guedesfelipe.github.io/pls-cli/" target="_bla
 # Posts Recentes
 
 
+## [⚡️ Aumentando a performance dos conjuntos (sets)]
+
+<aside class="mdx-author" markdown>
+![@guedesfelipe][@guedesfelipe avatar]
+
+<span>__Felipe Guedes__ · @guedesfelipe</span>
+<span>
+:octicons-calendar-24: 09 Outubro, 2022 ·
+:octicons-clock-24: 3 min leitura
+</span>
+</aside>
+
+
+  [@guedesfelipe avatar]: https://avatars.githubusercontent.com/u/25853920
+
+
+  [⚡️ Aumentando a performance dos conjuntos (sets)]: python/increasing-performance-sets.md
+
+---
+
+  Você sabe como aumentar o desempenho dos conjuntos (sets)?
+
+  [:octicons-arrow-right-24: Continue Lendo][⚡️ Aumentando a performance dos conjuntos (sets)]
+
+---
+
 ## [🛠 Python Disassembler]
 
 <aside class="mdx-author" markdown>
@@ -40,7 +66,7 @@ Sou criador do <b><a href="https://guedesfelipe.github.io/pls-cli/" target="_bla
 <span>__Felipe Guedes__ · @guedesfelipe</span>
 <span>
 :octicons-calendar-24: 31 Agosto, 2022 ·
-:octicons-clock-24: 1 min read
+:octicons-clock-24: 1 min leitura
 </span>
 </aside>
 
@@ -65,7 +91,7 @@ Você sabe como *disassemblar* um código python?
 <span>__Felipe Guedes__ · @guedesfelipe</span>
 <span>
 :octicons-calendar-24: 23 Agosto, 2022 ·
-:octicons-clock-24: 2 min read
+:octicons-clock-24: 2 min leitura
 </span>
 </aside>
 
