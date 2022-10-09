@@ -13,6 +13,7 @@ edit_uri: ""
 theme: 
   icon:
     logo: fontawesome/solid/code
+  favicon: assets/images/favicon.png
   name: material
   custom_dir: ../../overrides
   language: en
