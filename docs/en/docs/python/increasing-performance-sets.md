@@ -52,6 +52,9 @@ Here we can see that whoever does almost all the work is the special *byte_code*
 
 Notice that it does a lot of things that the first one doesn't, this makes this approach slower when loading sets in python, because instead of `BUILD_SET` it needs to do 3 more steps, which are `LOAD_NAME`, `BUILD_LIST` and `CALL_FUNCTION`. This way is slower because the python interpreter needs to look up the set name to find the constructor, then build a list and finally pass it to the constructor.
 
+You can find the description of all byte codes <a href="https://docs.python.org/3/library/dis.html#python-bytecode-instructions" target="_blank">here</a>.
+
+
 ## 📈 Benchmark
 
 In the table below, we can see the difference between the two way, and which one is more optimized:
