@@ -12,7 +12,6 @@ I'm a software engineer from <b>Brazil</b>. 🇧🇷
 
 <p align="center">
 The blog aims to share technical knowledge in programming that I acquired during years and recent learnings, it's like my notebook a little more refined, but with the same technical content. Always trying to simplify understanding.
-O blog tem como objetivo compartilhar conhecimento técnico em programação que adquiri durante anos e aprendizados recentes, é como se fosse meu bloco de notas um pouco mais refinado, mas com o mesmo teor técnico. Sempre tentando simplificar o entendimento.
 </p>
 
 
@@ -40,8 +39,8 @@ I'm the creator of <b><a href="https://guedesfelipe.github.io/pls-cli/" target="
 
 <span>__Felipe Guedes__ · @guedesfelipe</span>
 <span>
-:octicons-calendar-24: October 05, 2022 ·
-:octicons-clock-24: 1 min read
+:octicons-calendar-24: October 09, 2022 ·
+:octicons-clock-24: 3 min read
 </span>
 </aside>
 
